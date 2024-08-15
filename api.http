@@ -1,0 +1,27 @@
+### Recuperar todo
+GET http://localhost:3000/rutaApp/rutaRoute
+
+### Recuperar un dato por id
+GET http://localhost:3000/rutaApp/rutaRoute/id
+
+
+### Crear un dato con POST
+POST http://localhost:1234/rutaApp/rutaRoute
+Content-Type: application/json
+
+{
+  "sql": "SELECT * FROM table",
+  "name": "Nombre",
+  "state": true,
+}
+
+### Borrar un dato
+DELETE http://localhost:1234/rutaApp/rutaRoute/id
+
+### Actualizar un dato
+PATCH http://localhost:1234/rutaApp/rutaRoute/id
+Content-Type: application/json
+
+{
+  "state": false
+}
