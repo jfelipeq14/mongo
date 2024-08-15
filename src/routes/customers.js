@@ -7,11 +7,9 @@ export const createCustomersRouter = ({ customersModel }) => {
   const customersController = new CustomersController({ customersModel })
 
   customersRouter.get('/', customersController.getAll)
-  customersRouter.get('/:id', customersController.getById)
-  customersRouter.post('/logout', customersController.create)
-  customersRouter.put('/logout', customersController.update)
-  customersRouter.patch('/logout', customersController.updateAtributte)
-  customersRouter.delete('/logout', customersController.delete)
+  customersRouter.post('/', customersController.create)
+  customersRouter.put('/:id', customersController.update)
+  customersRouter.delete('/:id', customersController.delete)
 
   return customersRouter
 }
